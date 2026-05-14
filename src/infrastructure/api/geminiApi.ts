@@ -26,7 +26,7 @@ export const extractCostFromText = async (text: string): Promise<Partial<SmartCo
     throw new Error('Gemini API is not configured.');
   }
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
   const prompt = `
     Você é um assistente de gestão de obras. Extraia as informações financeiras do texto fornecido e retorne APENAS um objeto JSON válido, sem markdown, sem crases, sem nada além do JSON.
