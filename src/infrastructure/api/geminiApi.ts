@@ -41,7 +41,7 @@ export const extractCostFromText = async (text: string): Promise<Partial<SmartCo
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     const prompt = `
       Você é um assistente de gestão de obras. Extraia as informações financeiras do texto fornecido e retorne APENAS um objeto JSON válido, sem markdown, sem crases, sem nada além do JSON.
